@@ -1,3 +1,3 @@
-const app = require('./lib').default
+const app = require('./src').default
 
 app()
