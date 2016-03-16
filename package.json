@@ -1,12 +1,13 @@
 {
   "name": "@rafaeljesus/events-worker",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Record any actions your system perform",
+  "main": "build/index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build": "npm run clean && babel --presets es2015,stage-2 --plugins transform-runtime --ignore node_modules,test . -d build",
+    "build": "rm -rf build/* && babel . --presets es2015,stage-2 --plugins transform-runtime --ignore node_modules,test -d build",
     "serve": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 build/index.js",
+    "prepublish": "npm run build",
     "test": " npm run lint && NODE_ENV=test mocha",
     "lint": "standard --verbose | snazzy"
   },
@@ -41,7 +42,7 @@
     "standard": "^6.0.7"
   },
   "dependencies": {
-    "@rafaeljesus/events-model": "github:rafaeljesus/events-model",
+    "@rafaeljesus/events-model": "^1.0.5",
     "wascally": "^0.2.10"
   },
   "engines": {

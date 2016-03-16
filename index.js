@@ -1,1 +1,3 @@
-require('./lib/worker').default
+const app = require('./lib').default
+
+app()
