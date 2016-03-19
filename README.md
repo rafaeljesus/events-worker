@@ -1,5 +1,10 @@
 ## Events Worker
 
+[![bitHound Overall Score](https://www.bithound.io/github/rafaeljesus/events-worker/badges/score.svg)](https://www.bithound.io/github/rafaeljesus/events-worker)
+[![bitHound Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/dependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/devDependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/rafaeljesus/events-worker/badges/code.svg)](https://www.bithound.io/github/rafaeljesus/events-worker)
+
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/rafaeljesus/events-worker)
 
 * Worker runs your Events logs.
