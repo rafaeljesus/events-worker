@@ -13,7 +13,12 @@
   },
   "author": "Rafael Jesus <rafaelljesus86@gmail.com> (http://github.com/rafaeljesus)",
   "license": "MIT",
-  "pre-commit": [],
+  "pre-commit": [
+    "test"
+  ],
+  "bin": {
+    "babel": ".node_modules/.bin/babel"
+  },
   "standard": {
     "parser": "babel-eslint"
   },
