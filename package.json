@@ -44,7 +44,7 @@
     "standard": "^6.0.7"
   },
   "dependencies": {
-    "@rafaeljesus/events-model": "^1.0.5",
+    "@rafaeljesus/events-core": "^1.0.10",
     "wascally": "^0.2.10"
   },
   "engines": {

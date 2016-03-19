@@ -1,4 +1,4 @@
-import Event from '@rafaeljesus/events-model'
+import Event from '@rafaeljesus/events-core'
 
 export function startSubscription (rabbitmq) {
   const handler = rabbitmq.handle('events', handleMessage)

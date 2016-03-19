@@ -2,7 +2,7 @@ import test from 'ava'
 import chai from 'chai'
 import spies from 'chai-spies'
 import rabbitmq from 'wascally'
-import Event from '@rafaeljesus/events-model'
+import Event from '@rafaeljesus/events-core'
 
 import {startSubscription, handleMessage} from '../src/worker'
 import config from '../config'
