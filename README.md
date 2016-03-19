@@ -1,5 +1,6 @@
 ## Events Worker
 
+[ ![Codeship Status for rafaeljesus/events-worker](https://codeship.com/projects/aa00fef0-cf9a-0133-ebf6-7ebf8e5f4104/status?branch=master)](https://codeship.com/projects/141292)
 [![bitHound Overall Score](https://www.bithound.io/github/rafaeljesus/events-worker/badges/score.svg)](https://www.bithound.io/github/rafaeljesus/events-worker)
 [![bitHound Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/dependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/devDependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
