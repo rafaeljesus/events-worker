@@ -1,20 +1,23 @@
 import Event from '@rafaeljesus/events-core'
+import { log } from '@rafaeljesus/events-util'
 
 export function startSubscription (rabbitmq) {
   const handler = rabbitmq.handle('events', handleMessage)
 
   handler.catch((err, message) => {
-    console.error('events message rejected', err)
+    log.error('xxx message rejected', err)
     message.reject()
   })
 
   rabbitmq.startSubscription('events.q')
 }
 
-export async function handleMessage (message) {
+export async function handleMessage ({ payload }) {
   try {
+    log.info('<-- event received', payload)
     await Event.create(message.payload)
+    log.info('--> event handled ', payload)
   } catch (err) {
-    console.error('failed to create event', err)
+    log.error('xxx failed to handle event', err)
   }
 }

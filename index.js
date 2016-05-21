@@ -1,3 +1,4 @@
-const app = require('./src').default
+require('babel-register')
+require('babel-polyfill')
 
-app()
+require('./src')

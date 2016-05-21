@@ -2,23 +2,16 @@
   "name": "@rafaeljesus/events-worker",
   "version": "1.0.1",
   "description": "Record any actions your system perform",
-  "main": "build/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "build": "rm -rf build/* && babel . --presets es2015,stage-2 --plugins transform-runtime --ignore node_modules,test -d build",
-    "serve": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 build/index.js",
-    "prepublish": "npm run build",
-    "test": " npm run lint && NODE_ENV=test ava",
+    "start": "node index.js",
+    "test": " npm run lint && NODE_ENV=test nyc --reporter=lcov ava && nyc report",
     "lint": "standard --verbose | snazzy"
   },
   "author": "Rafael Jesus <rafaelljesus86@gmail.com> (http://github.com/rafaeljesus)",
   "license": "MIT",
   "pre-commit": [
-    "test"
   ],
-  "bin": {
-    "babel": ".node_modules/.bin/babel"
-  },
   "standard": {
     "parser": "babel-eslint"
   },
@@ -38,21 +31,19 @@
     "babel-plugin-transform-runtime": "^6.6.0",
     "babel-polyfill": "^6.6.1",
     "babel-preset-es2015": "^6.6.0",
-    "babel-preset-stage-1": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
-    "babel-runtime": "^6.6.1",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
-    "estraverse-fb": "^1.3.1",
     "pre-commit": "^1.1.2",
     "snazzy": "^3.0.0",
     "standard": "^6.0.7"
   },
   "dependencies": {
     "@rafaeljesus/events-core": "^1.0.10",
+    "@rafaeljesus/events-util": "^1.0.1",
     "wascally": "^0.2.10"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.4.0"
   }
 }

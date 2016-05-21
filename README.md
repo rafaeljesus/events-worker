@@ -1,6 +1,6 @@
 ## Events Worker
 
-[ ![Codeship Status for rafaeljesus/events-worker](https://codeship.com/projects/aa00fef0-cf9a-0133-ebf6-7ebf8e5f4104/status?branch=master)](https://codeship.com/projects/141292)
+[![CircleCI](https://circleci.com/gh/rafaeljesus/events-worker/tree/master.svg?style=svg)](https://circleci.com/gh/rafaeljesus/events-worker/tree/master)
 [![bitHound Overall Score](https://www.bithound.io/github/rafaeljesus/events-worker/badges/score.svg)](https://www.bithound.io/github/rafaeljesus/events-worker)
 [![bitHound Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/dependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/devDependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
@@ -10,15 +10,21 @@
 
 * Worker runs your Events logs.
 
-## Installation
-```bash
-npm install -g event-worker
-```
-
 ## Running server
 To start the serve execute:
 ```bash
-npm run build && npm run serve
+npm start
+```
+
+## Docker
+This repository has automated image builds on hub.docker.com.
+
+run:
+```
+$ docker-machine start default
+$ eval $(docker-machine env default)
+$ docker-compose up
+$ curl `docker-machine ip default`:3000
 ```
 
 ## Contributing

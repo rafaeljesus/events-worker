@@ -1,0 +1,27 @@
+version: '2'
+services:
+  api:
+    build: .
+    environment:
+      NODE_ENV: "development"
+    command: npm start
+    ports:
+    - "4000:4000"
+    volumes:
+    - .:/usr/src/events-worker
+    - /usr/src/events-worker/node_modules
+    links:
+    - db
+    - rmq
+  db:
+    image: mongo
+    ports:
+    - "27017:27017"
+    volumes:
+    - /data/db2/:/data/db/
+    command: /usr/bin/mongod --smallfiles
+  rmq:
+    image: "rabbitmq:management"
+    hostname: "rmq"
+    ports:
+    - '15672:15672'
