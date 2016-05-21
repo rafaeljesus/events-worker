@@ -15,7 +15,7 @@ test.beforeEach(async () =>
   await rabbitmq.configure(config[process.env.NODE_ENV])
 )
 
-test.afterEach(async () => {
+test.afterEach(async () =>
   await Event.remove()
 )
 
