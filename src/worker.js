@@ -15,8 +15,8 @@ export function startSubscription (rabbitmq) {
 export async function handleMessage ({ payload }) {
   try {
     log.info('<-- event received', payload)
-    await Event.create(message.payload)
-    log.info('--> event handled ', payload)
+    const res = await Event.create(payload)
+    log.info('--> event handled ', res)
   } catch (err) {
     log.error('xxx failed to handle event', err)
   }
