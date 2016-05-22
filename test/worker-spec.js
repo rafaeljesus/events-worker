@@ -2,7 +2,7 @@ import test from 'ava'
 import rabbitmq from 'wascally'
 import Event from '@rafaeljesus/events-core'
 
-import { startSubscription, handleMessage } from '../src/worker'
+import { handleMessage } from '../src/worker'
 import config from '../config'
 
 test.beforeEach(async () =>
