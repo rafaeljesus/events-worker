@@ -16,7 +16,7 @@ export async function handleMessage ({ body }) {
   try {
     log.info('<-- event received', body)
     const res = await Event.create(body)
-    log.info('--> event handled ', res)
+    log.info('--> event handled ', res.toJSON())
   } catch (err) {
     log.error('xxx failed to handle event', err)
   }
