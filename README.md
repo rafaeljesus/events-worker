@@ -1,6 +1,7 @@
 ## Events Worker
 
 [![CircleCI](https://circleci.com/gh/rafaeljesus/events-worker/tree/master.svg?style=svg)](https://circleci.com/gh/rafaeljesus/events-worker/tree/master)
+[![Docker Image Pulls](https://img.shields.io/docker/pulls/rafaeljesus/events-worker.svg)](https://hub.docker.com/r/rafaeljesus/events-worker/)
 [![bitHound Overall Score](https://www.bithound.io/github/rafaeljesus/events-worker/badges/score.svg)](https://www.bithound.io/github/rafaeljesus/events-worker)
 [![bitHound Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/dependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/rafaeljesus/events-worker/badges/devDependencies.svg)](https://www.bithound.io/github/rafaeljesus/events-worker/master/dependencies/npm)
