@@ -12,10 +12,10 @@ export function startSubscription (rabbitmq) {
   rabbitmq.startSubscription('events.q')
 }
 
-export async function handleMessage ({ payload }) {
+export async function handleMessage ({ body }) {
   try {
-    log.info('<-- event received', payload)
-    const res = await Event.create(payload)
+    log.info('<-- event received', body)
+    const res = await Event.create(body)
     log.info('--> event handled ', res)
   } catch (err) {
     log.error('xxx failed to handle event', err)
