@@ -28,7 +28,7 @@ test('should startSubscription', async () => {
 })
 
 test('should handleMessage', async () => {
-  await handleMessage({ name: 'order_created' })
+  await handleMessage({ body: { name: 'order_created' } })
   const res = await Event.findOne()
   expect(res._id).to.exist
 })
